@@ -234,7 +234,7 @@ namespace Core.Servicers.Instances
                 Task.Run(async () =>
                 {
                     //  获取favicon
-                    IFaviconManager fm = null;
+                    IFaviconManager fm = new ChromeFaviconManager();
                     switch (browserType)
                     {
                         case BrowserType.Chrome:

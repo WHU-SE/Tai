@@ -23,7 +23,7 @@ namespace Core.Servicers.Instances
     public class ChromeBrowserWatch : IBrowserWatcher
     {
         public event BrowserObserverEventHandler OnSiteChanged;
-        private string url, title;
+        private string url;
         CUIAutomation automation;
         //  根元素（监听站点切换使用）
         IUIAutomationElement rootElement;
@@ -148,7 +148,7 @@ namespace Core.Servicers.Instances
             return title.Substring(0, length);
         }
 
-        private async void Handle(string title)
+        private async Task Handle(string title)
         {
             title = FormatTitle(title);
             //Debug.WriteLine($"切换标题 {title}");
@@ -208,7 +208,6 @@ namespace Core.Servicers.Instances
             if (url != this.url)
             {
                 this.url = url;
-                this.title = title;
                 OnSiteChanged?.Invoke(BrowserType.Chrome, new Models.WebPage.Site()
                 {
                     Url = url,

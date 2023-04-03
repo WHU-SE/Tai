@@ -350,8 +350,10 @@ namespace Core.Servicers.Instances
                         var log = data.Where(m => m.CategoryID == category.CategoryID && m.Time.ToString("yyyy-MM-dd HH:00:00") == time).FirstOrDefault();
 
                         var item = list.Where(m => m.CategoryID == category.CategoryID).FirstOrDefault();
-
-                        item.Values[i] = log.Total;
+                        if (item != null)
+                        {
+                            item.Values[i] = log.Total;
+                        }
                     }
                 }
                 return list;
@@ -401,8 +403,10 @@ namespace Core.Servicers.Instances
                         var log = data.Where(m => m.CategoryID == category.CategoryID && m.Time.ToString("yyyy-MM-dd 00:00:00") == time).FirstOrDefault();
 
                         var item = list.Where(m => m.CategoryID == category.CategoryID).FirstOrDefault();
-
-                        item.Values[i] = log.Total;
+                        if (item != null)
+                        {
+                            item.Values[i] = log.Total;
+                        }
                     }
                 }
                 return list;
@@ -455,8 +459,10 @@ namespace Core.Servicers.Instances
                         var total = data.Where(m => m.CategoryID == category.CategoryID && m.Time >= dayArr[0] && m.Time <= dayArr[1]).Sum(m => m.Total);
 
                         var item = list.Where(m => m.CategoryID == category.CategoryID).FirstOrDefault();
-
-                        item.Values[i - 1] = total;
+                        if (item != null)
+                        {
+                            item.Values[i - 1] = total;
+                        }
                     }
                 }
                 return list;

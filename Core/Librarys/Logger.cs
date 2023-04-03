@@ -133,7 +133,7 @@ namespace Core.Librarys
             try
             {
                 ManagementObjectSearcher managementObjectSearcher = new ManagementObjectSearcher("SELECT * FROM Win32_OperatingSystem");
-                foreach (ManagementObject obj in managementObjectSearcher.Get())
+                foreach (ManagementBaseObject obj in managementObjectSearcher.Get())
                 {
                     name = obj["Name"].ToString();
                 }

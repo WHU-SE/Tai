@@ -39,7 +39,7 @@ namespace Core.Servicers.Instances
             Handle(hwnd);
         }
 
-        private async void Handle(IntPtr hwnd)
+        private async Task Handle(IntPtr hwnd)
         {
             string processName = String.Empty, processFileName = String.Empty, processDescription = String.Empty;
 
