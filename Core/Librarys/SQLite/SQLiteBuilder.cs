@@ -55,7 +55,6 @@ namespace Core.Librarys.SQLite
     /// </summary>
     public class SQLiteBuilder
     {
-        public static bool IsSelfChecking = true;
 
         /// <summary>
         /// 连接字符串
@@ -100,12 +99,8 @@ namespace Core.Librarys.SQLite
             {
                 bool res = HandleTable();
 
-                IsSelfChecking = false;
-
                 return res;
             }
-
-            IsSelfChecking = false;
 
             return true;
         }
