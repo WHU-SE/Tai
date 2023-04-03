@@ -57,7 +57,6 @@ namespace Core.Librarys.SQLite
     {
         public static bool IsSelfChecking = true;
 
-        private System.Data.Entity.Infrastructure.DbModel model;
         /// <summary>
         /// 连接字符串
         /// </summary>
@@ -75,18 +74,15 @@ namespace Core.Librarys.SQLite
         /// 数据模型
         /// </summary>
         private System.Data.Entity.Core.Metadata.Edm.EdmModel storeModel;
-        private System.Data.Entity.Core.Common.DbProviderManifest providerManifest;
         public SQLiteBuilder(System.Data.Entity.Infrastructure.DbModel model)
         {
-            this.model = model;
+
 
             if (model != null)
             {
                 connstr = model.ProviderInfo.ProviderManifestToken;
 
                 storeModel = model.StoreModel;
-
-                providerManifest = model.ProviderManifest;
 
                 dbFile = connstr.Split('=')[1];
 

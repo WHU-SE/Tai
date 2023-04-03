@@ -23,7 +23,7 @@ namespace Core.Servicers.Instances
     public class MSEdgeBrowserWatch : IBrowserWatcher
     {
         public event BrowserObserverEventHandler OnSiteChanged;
-        private string url, title;
+        private string url;
         CUIAutomation automation;
         //  根元素（监听站点切换使用）
         IUIAutomationElement rootElement;
@@ -231,7 +231,6 @@ namespace Core.Servicers.Instances
             if (url != this.url)
             {
                 this.url = url;
-                this.title = title;
                 OnSiteChanged?.Invoke(BrowserType.MSEdge, new Models.WebPage.Site()
                 {
                     Url = url,
