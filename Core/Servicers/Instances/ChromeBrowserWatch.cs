@@ -148,7 +148,7 @@ namespace Core.Servicers.Instances
             return title.Substring(0, length);
         }
 
-        private async void Handle(string title)
+        private async Task Handle(string title)
         {
             title = FormatTitle(title);
             //Debug.WriteLine($"切换标题 {title}");

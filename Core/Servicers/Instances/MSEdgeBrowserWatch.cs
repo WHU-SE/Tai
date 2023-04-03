@@ -140,7 +140,7 @@ namespace Core.Servicers.Instances
             return title.Substring(0, length);
         }
 
-        private async void Handle()
+        private async Task Handle()
         {
             string title = await GetURLTitleSync();
             title = FormatTitle(title);
