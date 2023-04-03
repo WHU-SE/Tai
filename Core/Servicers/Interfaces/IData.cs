@@ -122,9 +122,9 @@ namespace Core.Servicers.Interfaces
         /// <summary>
         /// 获取指定年份按月统计数据
         /// </summary>
-        /// <param name="year"></param>
+        /// <param name="date"></param>
         /// <returns></returns>
-        double[] GetMonthTotalData(DateTime year);
+        double[] GetMonthTotalData(DateTime date);
 
 
     }

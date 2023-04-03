@@ -723,11 +723,11 @@ namespace Core.Servicers.Instances
             }
         }
 
-        public WebSiteModel GetWebSite(string domain)
+        public WebSiteModel GetWebSite(string domain_)
         {
             using (var db = _database.GetReaderContext())
             {
-                var result = db.WebSites.Where(m => m.Domain.ToLower() == domain.ToLower()).FirstOrDefault();
+                var result = db.WebSites.Where(m => m.Domain.ToLower() == domain_.ToLower()).FirstOrDefault();
                 return result;
             }
         }
