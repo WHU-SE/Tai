@@ -8,10 +8,10 @@ namespace Core.Models.AppObserver
 {
     public class AppObserverEventArgs
     {
-        private IntPtr _handle;
-        private string _processName;
-        private string _description;
-        private string _file;
+        private readonly IntPtr _handle;
+        private readonly string _processName;
+        private readonly string _description;
+        private readonly string _file;
 
         public string ProcessName { get { return _processName; } }
         public string Description { get { return _description; } }

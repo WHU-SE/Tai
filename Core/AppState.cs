@@ -9,7 +9,7 @@ namespace Core
     /// <summary>
     /// app状态
     /// </summary>
-    public class AppState
+    public static class AppState
     {
         /// <summary>
         /// 是否正在加载中

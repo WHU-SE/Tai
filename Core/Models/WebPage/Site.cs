@@ -15,7 +15,7 @@ namespace Core.Models.WebPage
             return $"Title:{Title},Url:{Url}";
         }
 
-        public static Site Empty = new Site()
+        public readonly static Site Empty = new Site()
         {
             Title = string.Empty,
             Url = string.Empty

@@ -16,7 +16,7 @@ using System.Xml.Serialization;
 
 namespace Core.Librarys
 {
-    public class Iconer
+    public static class Iconer
     {
         /// <summary>
         /// 格式化图标文件名称

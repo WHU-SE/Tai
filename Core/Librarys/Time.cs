@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Core.Librarys
 {
-    public class Time
+    public static class Time
     {
         public static string ToHoursString(double seconds)
         {

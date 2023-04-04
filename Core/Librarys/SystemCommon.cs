@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Core.Librarys
 {
-    public class SystemCommon
+    public static class SystemCommon
     {
         /// <summary>
         /// 设置开机启动
