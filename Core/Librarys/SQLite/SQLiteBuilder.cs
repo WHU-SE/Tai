@@ -112,8 +112,6 @@ namespace Core.Librarys.SQLite
         {
             try
             {
-                bool isNew = true;
-
                 //  处理前先复制一份数据库文件以防万一
                 string dir = Path.Combine(Path.GetDirectoryName(dbFile), "backup");
                 string backupName = Path.Combine(dir, $"data.handle.backup");
@@ -128,8 +126,6 @@ namespace Core.Librarys.SQLite
 
                 if (File.Exists(dbFile))
                 {
-                    isNew = false;
-
                     File.Copy(dbFile, backupName);
                 }
                 var modelInfos = GetModelInfos();
