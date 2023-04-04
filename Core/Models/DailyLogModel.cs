@@ -25,18 +25,7 @@ namespace Core.Models
         /// 应用ID
         /// </summary>
         public int AppModelID { get; set; }
-        ///// <summary>
-        ///// 进程名称
-        ///// </summary>
-        //public string ProcessName { get; set; }
-        ///// <summary>
-        ///// 进程描述
-        ///// </summary>
-        //public string ProcessDescription { get; set; }
-        ///// <summary>
-        ///// 进程文件
-        ///// </summary>
-        //public string File { get; set; }
+
         public virtual AppModel AppModel { get; set; }
     }
 }

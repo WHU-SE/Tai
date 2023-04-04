@@ -30,8 +30,6 @@ namespace Core.Librarys
 
         [DllImport("psapi.dll", SetLastError = true)]
         public static extern int GetModuleFileNameExA(IntPtr hProcess, IntPtr hModule, StringBuilder lpFilename, int nSize);
-        //[DllImport("kernel32.dll", SetLastError = true, CharSet = CharSet.Auto)]
-        //static extern bool QueryFullProcessImageName(IntPtr hProcess, uint dwFlags, [Out, MarshalAs(UnmanagedType.LPTStr)] StringBuilder lpExeName, ref uint lpdwSize);
 
         [DllImport("kernel32.dll", SetLastError = true)]
         public static extern IntPtr OpenProcess(uint dwDesiredAccess, bool bInheritHandle, int dwProcessId);
@@ -65,8 +63,6 @@ namespace Core.Librarys
         public const UInt32 PROCESS_QUERY_INFORMATION = 0x400;
         public const UInt32 PROCESS_VM_READ = 0x010;
 
-        //private const uint WINEVENT_OUTOFCONTEXT = 0;
-        //private const uint EVENT_SYSTEM_FOREGROUND = 3;
         public static string UWP_AppName(IntPtr hWnd, uint pID)
         {
             WINDOWINFO windowinfo = new WINDOWINFO();
