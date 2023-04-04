@@ -59,20 +59,20 @@ namespace Core.Librarys.SQLite
         /// <summary>
         /// 连接字符串
         /// </summary>
-        private string connstr;
+        private readonly string connstr;
         /// <summary>
         /// 数据库版本文件
         /// </summary>
-        private string versionFile;
+        private readonly string versionFile;
 
         /// <summary>
         /// 数据库文件路径
         /// </summary>
-        private string dbFile;
+        private readonly string dbFile;
         /// <summary>
         /// 数据模型
         /// </summary>
-        private System.Data.Entity.Core.Metadata.Edm.EdmModel storeModel;
+        private readonly System.Data.Entity.Core.Metadata.Edm.EdmModel storeModel;
         public SQLiteBuilder(System.Data.Entity.Infrastructure.DbModel model)
         {
 
