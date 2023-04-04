@@ -295,8 +295,12 @@ namespace Core.Librarys.SQLite
         /// <returns></returns>
         private string GetCreateColumnSQL(string tableName, IModelProperties properties)
         {
-            string typeDefault = !properties.PK ? properties.Type == DbType.@int ? "NULL DEFAULT 0" : "NULL DEFAULT ''" : "";
-
+            string typeDefault = "";
+            if (!properties.PK)
+            {
+                typeDefault = properties.Type == DbType.@int ? "NULL DEFAULT 0" : "NULL DEFAULT ''";
+            }
+            
             if (properties.PK)
             {
                 properties.Type = DbType.INTEGER;
