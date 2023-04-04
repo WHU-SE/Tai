@@ -10,7 +10,7 @@ namespace Core.Librarys
     /// <summary>
     /// 文件操作帮助类
     /// </summary>
-    public class FileHelper
+    public static class FileHelper
     {
         /// <summary>
         /// 获取根目录

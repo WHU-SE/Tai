@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Core.Librarys
 {
-    public class ProcessHelper
+    public static class ProcessHelper
     {
         public static bool Run(string filename, string[] args)
         {

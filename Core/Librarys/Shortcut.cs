@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Core.Librarys
 {
-    public class Shortcut
+    public static class Shortcut
     {
         /// <summary>
         /// 为本程序创建一个快捷方式。
